@@ -25,4 +25,8 @@ MIR LENOVO - 2023.08.08
 
 	pass: 1234
  	ssh u0_a92@10.0.40.19 -p 8022
+
+	pip install virtualenv
+	virtualenv venv -p python
+	source venv/bin/activate
  	
