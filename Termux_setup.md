@@ -19,4 +19,10 @@ in windows cmd:
     
 	screen #start a new screen
 	CTRL+a d #send to the back
-	screen -d #get the back screen
+	screen -d #get the screen from the background
+
+MIR LENOVO - 2023.08.08
+
+	pass: 1234
+ 	ssh u0_a92@10.0.40.19 -p 8022
+ 	
