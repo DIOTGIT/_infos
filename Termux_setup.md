@@ -1,7 +1,18 @@
 Download Termux from: https://f-droid.org/en/packages/com.termux/
 in a terminal:
 
-    termux-setup-storage #make a shared folder 
+	termux-setup-storage #make a shared folder 
+ 
+	pkg update && pkg upgrade -y
+ 	pkg install python build-essential curl git screen openssh -y
+
+ 	pkg install libarrow-cpp -y    # Fix for pyarrow
+	export MATHLIB="m"          # Fix for numpy
+	export LDFLAGS="-lpython3.11"    # Fix for pyarrow missing symbols
+ 	rm -rf /var/lib/apt/lists/*
+ 	streamlit hello                  # Run streamlit
+
+    
     apt update
     apt upgrade
     apt install git screen openssh python
@@ -29,4 +40,8 @@ MIR LENOVO - 2023.08.08
 	pip install virtualenv
 	virtualenv venv -p python
 	source venv/bin/activate
- 	
+
+Python another version
+	pkg install tur-repo
+	pkg update
+	pkg install python3.9
