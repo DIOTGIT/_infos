@@ -6,3 +6,13 @@ link _infos/homeassistant
   - add **Remote - SSH** extension
   - add **YAML** extension
   
+# **Docker**
+  - sudo apt-get purge modemmanager
+  - sudo apt-get install docker-compose
+  - sudo chmod 777 /opt
+  - add **docker-compose.yaml** to opt
+  - in opt folder **docker-compose up -d**
+
+
+deepstack AI
+  
