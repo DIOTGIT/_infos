@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    environment:
+      - TZ=Europe/Budapest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer:/data
+    
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - /opt/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:hu
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+  
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - /opt/plex_server/config:/config
+      - /opt/plex_server/tv:/tv
+      - /opt/plex_server/movies:/movies
+    restart: unless-stopped
