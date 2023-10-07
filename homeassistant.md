@@ -13,6 +13,14 @@ link _infos/homeassistant
   - add **docker-compose.yaml** to opt
   - in opt folder **docker-compose up -d**
 
+# **mosquitto**
+  - on **mosquitto** container terminal sh
+    - mosquitto_passwd -c /mosquitto/config/password.txt hass
+    - exit
+  - sudo chown rpi -R /opt
+  - restart **mosquitto** contanier
+
+
 
 deepstack AI
   
