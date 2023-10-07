@@ -14,3 +14,7 @@ experimental:
   new_api: true
 advanced:
   network_key: GENERATE
+  log_level: debug
+external_converters:
+  - TS0601.js
+
