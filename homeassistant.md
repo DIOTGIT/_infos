@@ -14,6 +14,9 @@ link _infos/homeassistant
   - in opt folder **docker-compose up -d**
 
 # **mosquitto**
+  - https://www.youtube.com/watch?v=cZV2OOXLtEI&list=PL4ed4sZb-R_8dJmakzfBywx1zL9HrFEOy&index=7
+  - make mosquitto.conf file
+  - make container
   - on **mosquitto** container terminal sh
     - mosquitto_passwd -c /mosquitto/config/password.txt hass
     - exit
