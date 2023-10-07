@@ -22,6 +22,8 @@ link _infos/homeassistant
     - exit
   - sudo chown rpi -R /opt
   - restart **mosquitto** contanier
+  - on **homeassistant**
+    - settings\devices\add integration\mqtt
 
 
 
