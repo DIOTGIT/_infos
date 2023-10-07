@@ -19,8 +19,8 @@ services:
     volumes:
       - /opt/homeassistant/config:/config
       - /etc/localtime:/etc/localtime:ro
-    devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
+    #devices:
+      #- /dev/ttyUSB0:/dev/ttyUSB0
     restart: unless-stopped
     privileged: true
     network_mode: host
@@ -66,4 +66,5 @@ services:
       - TZ=Europe/Budapest
     devices:
       # Make sure this matched your adapter location
-      - /dev/ttyUSB0:/dev/ttyACM0
+      #- /dev/ttyUSB0:/dev/ttyACM0
+      - /dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_c6fdc1b5575aed11ba09f1165820eef3-if00-port0:/dev/ttyACM0
