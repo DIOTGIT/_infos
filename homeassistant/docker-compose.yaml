@@ -18,7 +18,7 @@ services:
     image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
       - /opt/homeassistant/config:/config
-      - /etc/localtime:/etc/localtime:hu
+      - /etc/localtime:/etc/localtime:ro
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
     restart: unless-stopped
@@ -40,3 +40,15 @@ services:
       - /opt/plex_server/tv:/tv
       - /opt/plex_server/movies:/movies
     restart: unless-stopped
+  
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    volumes:
+      - /opt/mosquitto:/mosquitto
+      - /opt/mosquitto/data:/mosquitto/data
+      - /opt/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
+    
