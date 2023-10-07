@@ -42,6 +42,9 @@ link _infos/homeassistant
     ```
     - restart homeassistant
 
-
+# HACS
+  - in a homeassistant/config folder run: `wget -O - https://get.hacs.xyz | bash -`
+  - restart homeassistant
+  - setup/add integration/hacs  
 deepstack AI
   
