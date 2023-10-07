@@ -25,7 +25,9 @@ link _infos/homeassistant
   - on **homeassistant**
     - settings\devices\add integration\mqtt
 
-
+# **zigbee2mqtt**
+  - ls -l /dev/serial/by-id    #list the used usb names
+  - make zigbee2mqtt/data/configuration.yaml
 
 deepstack AI
   
