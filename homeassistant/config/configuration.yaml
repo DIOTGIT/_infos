@@ -1,0 +1,42 @@
+automation:
+assist_pipeline:
+backup:
+bluetooth:
+cloud:
+config:
+counter:
+dhcp:
+# energy:
+frontend:
+hardware:
+history:
+homeassistant_alerts:
+image:
+image_upload:
+input_boolean:
+input_button:
+input_datetime:
+input_number:
+input_select:
+input_text:
+logbook:
+logger:
+# map:
+# media_source:
+mobile_app:
+my:
+network:
+person:
+schedule:
+scene:
+script:
+ssdp:
+stream:
+sun:
+system_health:
+tag:
+timer:
+usb:
+webhook:
+zeroconf:
+zone:
