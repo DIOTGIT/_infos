@@ -26,8 +26,22 @@ link _infos/homeassistant
     - settings\devices\add integration\mqtt
 
 # **zigbee2mqtt**
+  - https://www.youtube.com/watch?v=sFSqgiOoPMs&list=RDCMUC67SMH0qLMJ4b4Guud0mKjw&index=1
   - ls -l /dev/serial/by-id    #list the used usb names
   - make zigbee2mqtt/data/configuration.yaml
+  - make container
+  - to homeassistant configuration.yaml
+
+    ```
+    Panel_iframe:
+      zigbee2mqtt:
+        title: "zigbee2mqtt"
+        url: "http://192.168.1.200:8080"
+        icon: mdi:zigbee
+        require_admin: true
+    ```
+    - restart homeassistant
+
 
 deepstack AI
   
