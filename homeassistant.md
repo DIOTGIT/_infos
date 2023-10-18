@@ -45,6 +45,19 @@ link _infos/homeassistant
 # HACS
   - in a homeassistant/config folder run: `wget -O - https://get.hacs.xyz | bash -`
   - restart homeassistant
-  - setup/add integration/hacs  
+  - setup/add integration/hacs
+
+# plex
+  - https://www.youtube.com/watch?v=XudbMJ_3NRc
+  - see `id` command in terminal (PUID=1000, PGID=100 -in config)
+  - in a browser `https://www.plex.tv/claim/`, paste to the config
+    ```
+      - PUID=1000
+      - PGID=100
+      - VERSION=docker
+      - PLEX_CLAIM= claim-t1FzC8yVRXyZZ7DQYwTr
+    ```
+   -  
+
 deepstack AI
   
