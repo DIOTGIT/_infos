@@ -79,8 +79,7 @@ services:
       - CLI_ARGS= #optional
     volumes:
       - /opt/duplicati/config:/config
-      - /opt/duplicati/backups:/backups
-      - /opt/duplicati/source:/source
+      - /opt:/source
     ports:
       - 8200:8200
     restart: unless-stopped
