@@ -23,6 +23,6 @@ cd /opt/mosquitto/config
 wget https://raw.githubusercontent.com/DIOTGIT/_infos/main/homeassistant/mosquitto/config/mosquitto.conf
 wget https://raw.githubusercontent.com/DIOTGIT/_infos/main/homeassistant/mosquitto/config/password.txt
 cd /opt
-chown -R rpi /opt
+sudo chown -R rpi /opt
 sudo docker-compose up -d
 ```
