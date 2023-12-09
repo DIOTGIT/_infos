@@ -12,6 +12,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/portainer:/data
+    networks:
+      opt_net:
+        ipv4_address: 172.20.0.1
     
   homeassistant:
     container_name: homeassistant
@@ -52,6 +55,9 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
+    networks:
+      opt_net:
+        ipv4_address: 172.20.0.2
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
@@ -69,6 +75,9 @@ services:
       # Make sure this matched your adapter location
       #- /dev/ttyUSB0:/dev/ttyACM0
       - /dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_c6fdc1b5575aed11ba09f1165820eef3-if00-port0:/dev/ttyACM0
+    networks:
+      opt_net:
+        ipv4_address: 172.20.0.3
 
   duplicati:
     image: lscr.io/linuxserver/duplicati:latest
@@ -84,3 +93,14 @@ services:
     ports:
       - 8200:8200
     restart: unless-stopped
+    networks:
+      opt_net:
+        ipv4_address: 172.20.0.4
+
+networks:
+  opt_net:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+          #docker-compose v3+ do not use ip_range
+          #ip_range: 172.28.5.0/24
