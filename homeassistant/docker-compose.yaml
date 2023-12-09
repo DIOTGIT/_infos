@@ -44,6 +44,7 @@ services:
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
+    restart: unless-stopped
     volumes:
       - /opt/mosquitto:/mosquitto
       - /opt/mosquitto/data:/mosquitto/data
