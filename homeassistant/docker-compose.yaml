@@ -96,6 +96,21 @@ services:
     networks:
       opt_net:
         ipv4_address: 172.20.0.4
+        
+  appdaemon:
+    container_name: appdaemon
+    restart: unless-stopped
+    image: acockburn/appdaemon:latest
+    environment:
+      - TZ=Europe/Berlin
+      - HA_URL=http://homeassistant:8123
+      - TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwODAzYWU1NzdjODg0M2Q4OTBhYjNhYTBlMzdhZTNjZiIsImlhdCI6MTcwMjY1NDgyNywiZXhwIjoyMDE4MDE0ODI3fQ.7w2PoTXwJsd856baEZwjoaJVt1KXABS0Iqol65cDlSA
+    ports:
+      - "5050:5050"
+    volumes:
+      - /opt/appdeamon/conf:/conf
+    networks:
+      opt_net:
 
 networks:
   opt_net:
