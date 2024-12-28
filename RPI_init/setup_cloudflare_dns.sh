@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# futtatás:
+# chmod +x setup_cloudflare_dns.sh
+# sudo ./setup_cloudflare_dns.sh
+
 # Ellenőrizzük, hogy root jogosultsággal futtatjuk-e a scriptet
 if [ "$EUID" -ne 0 ]; then
     echo "Kérlek, futtasd ezt a scriptet root jogosultsággal (sudo)."
