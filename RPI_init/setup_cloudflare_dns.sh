@@ -21,7 +21,7 @@ cat > "$CONFIG_FILE" << EOL
 AUTH_EMAIL="diothomeautomation@gmail.com"
 AUTH_KEY="e639b6a6fbb85e68c96e84cfbada92b285431"
 ZONE_ID="82e220d9eb07a1838228c1e5f68195f1"
-RECORD_NAME="rpi.alapala.trade"
+RECORD_NAME="rpi2.alapala.trade"
 RECORD_TYPE="A"
 EOL
 
