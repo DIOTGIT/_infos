@@ -40,7 +40,12 @@ usermod -aG docker rpi
 echo "Docker Compose telepítése..."
 apt install -y docker-compose
 
+sudo systemctl enable docker
+sudo systemctl start docker
+
+docker --version
+docker-compose --version
+
+
 echo "A telepítés befejeződött. Kérlek, jelentkezz ki és be újra, vagy indítsd újra a rendszert a változtatások érvénybe lépéséhez."
-echo "A Docker és Docker Compose verzióit a következő parancsokkal ellenőrizheted:"
-echo "docker --version"
-echo "docker-compose --version"
+
